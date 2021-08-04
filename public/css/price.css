@@ -1,0 +1,386 @@
+.popover-title {
+    text-align: center;
+}
+
+.custom-popover li {
+    border: none!important;
+    text-align: center;
+}
+
+.toggle,
+.toggler {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 10px;
+}
+
+.toggler {
+    color: grey;
+    transition: .2s;
+    font-weight: bold;
+}
+
+.toggler--is-active {
+    color: #e1a70a;
+}
+
+.b {
+    display: block;
+}
+
+.toggle {
+    position: relative;
+    width: 80px;
+    height: 35px;
+    border-radius: 100px;
+    background-color: white;
+    overflow: hidden;
+    box-shadow: inset 0 0 2px 1px rgba(0, 0, 0, 0.05);
+}
+
+.check {
+    position: absolute;
+    display: block;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 6;
+}
+
+.check:checked~.switch {
+    right: 2px;
+    left: 57.5%;
+    transition: 0.25s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    transition-property: left, right;
+    transition-delay: .08s, 0s;
+}
+
+.switch {
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    bottom: 2px;
+    right: 57.5%;
+    background-color: rgb(4, 4, 80);
+    border-radius: 36px;
+    z-index: 1;
+    transition: 0.25s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    transition-property: left, right;
+    transition-delay: 0s, .08s;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.pricing-section {
+    /*padding: 110px 0 150px 0;*/
+    float: right;
+    width: 100%;
+    text-align: center;
+}
+
+.pricing-columns .wrapper-full {
+    position: relative;
+    width: 1170px;
+    margin: 0 auto;
+}
+
+#pricing-chart,
+.pricing-columns-both #pricing-chart {
+    margin-top: 100px;
+    float: left;
+    position: relative;
+}
+
+#pricing-chart #smaller-plans,
+.pricing-columns-both #pricing-chart #smaller-plans {
+    display: block;
+}
+
+#pricing-chart .plan,
+.pricing-columns-both #pricing-chart .plan {
+    float: left;
+    background-color: #fafafa;
+    position: relative;
+    color: #454545;
+    padding: 14px;
+    border-right: 1px solid #e1e1e1;
+    border-bottom: 1px solid #e1e1e1;
+    width: 207px;
+}
+
+#pricing-chart .plan:first-child,
+.pricing-columns-both #pricing-chart .plan:first-child {
+    border-left: 1px solid #e1e1e1;
+}
+
+#pricing-chart .plan:before,
+.pricing-columns-both #pricing-chart .plan:before {
+    content: "";
+    position: absolute;
+    height: 5px;
+    left: -1px;
+    top: 0;
+    background-color: #233E48;
+    width: 207px;
+}
+
+#pricing-chart .plan .price,
+.pricing-columns-both #pricing-chart .plan .price {
+    font-size: 26px;
+    float: left;
+    width: 100%;
+    margin-bottom: 35px;
+    margin-top: 17px;
+}
+
+#pricing-chart .plan .price .dollar,
+.pricing-columns-both #pricing-chart .plan .price .dollar {
+    top: -10px;
+    letter-spacing: -1px;
+    left: 3px;
+}
+
+#pricing-chart .plan .price .amount,
+.pricing-columns-both #pricing-chart .plan .price .amount {
+    font-size: 15x;
+    font-weight: 400;
+}
+
+#pricing-chart .plan .price .slash,
+.pricing-columns-both #pricing-chart .plan .price .slash {
+    font-weight: 300;
+    left: -2px;
+}
+
+#pricing-chart .plan .price .month,
+.pricing-columns-both #pricing-chart .plan .price .month {
+    font-weight: 300;
+    left: -7px;
+}
+
+#pricing-chart .plan ul,
+.pricing-columns-both #pricing-chart .plan ul {
+    padding: 0 18px;
+    margin-bottom: 40px;
+}
+
+#pricing-chart .plan ul li,
+.pricing-columns-both #pricing-chart .plan ul li {
+    font-weight: 600;
+    font-size: 15px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+#pricing-chart .plan ul li span,
+.pricing-columns-both #pricing-chart .plan ul li span {
+    color: #9e9e9e;
+    display: inline-block;
+    margin-left: 7px;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+#pricing-chart .plan a.sign-up,
+.pricing-columns-both #pricing-chart .plan a.sign-up {
+    width: 67%;
+    padding: 13px;
+    background-color: white;
+    border: 1px solid #e1e1e1;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #9e9e9e;
+    display: block;
+    margin-bottom: 5px;
+    font-size: 15px;
+    clear: left;
+    letter-spacing: 1.5px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.pricing-section .sign-up {
+    padding: 17px 50px;
+    text-transform: uppercase;
+    background-color: #93cc76;
+    color: white;
+    letter-spacing: 0.1em;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    white-space: pre;
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-top: 30px;
+}
+
+#pricing-chart .popular,
+.pricing-columns-both #pricing-chart .popular {
+    width: 274px;
+    position: relative;
+    top: -30px;
+    background-color: white;
+    margin-left: -2px;
+    right: 0;
+    border-left: 1px solid #e1e1e1;
+    border-right: 1px solid #e1e1e1;
+}
+
+#pricing-chart .popular:before,
+.pricing-columns-both #pricing-chart .popular:before {
+    width: 274px;
+    background-color: #081669;
+    height: 7px;
+}
+
+#pricing-chart .popular a.sign-up,
+.pricing-columns-both #pricing-chart .popular a.sign-up {
+    background-color: #081669;
+    border: none;
+    color: #ffffff;
+}
+
+#pricing-chart .popular .price .amount,
+.pricing-columns-both #pricing-chart .popular .price .amount {
+    font-size: 60px;
+}
+
+.bandwidth {
+    display: block;
+    color: #272727;
+    font-weight: bold;
+    font-size: 3px;
+    right: 20;
+    float: right;
+    top: 10px;
+}
+
+#pricing-chart .popular p.pop-plan,
+.pricing-columns-both #pricing-chart .popular p.pop-plan {
+    color: #454545;
+    font-size: 16px;
+    margin-bottom: 45px;
+}
+
+.pricing-columns #pricing-chart .popular .price,
+.pricing-columns-both #pricing-chart .popular .price {
+    margin-bottom: 0px;
+}
+
+#pricing-chart .plan a.sign-up:hover,
+.pricing-columns-both #pricing-chart .plan a.sign-up:hover {
+    border: 0;
+    color: #d1ce06;
+    opacity: 0.8;
+}
+
+.hide {
+    display: none;
+}
+
+.price {
+    width: 67%;
+}
+
+.heads {
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.price {
+    list-style-type: none;
+    border: 1px solid #eee;
+    margin: 0;
+    padding: 0;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.price:hover {
+    box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2)
+}
+
+.price .header {
+    background-color: #111;
+    color: white;
+    font-size: 25px;
+}
+
+.price li {
+    border-bottom: 1px solid #eee;
+    padding: 20px;
+    text-align: center;
+}
+
+.price .grey {
+    background-color: #eee;
+    font-size: 20px;
+}
+
+@media (min-width: 360px) and (max-width: 480px) {
+    .toggle,
+    .toggler {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 10px;
+        font-size: 8px;
+    }
+    .check {
+        position: absolute;
+        display: block;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        width: 20%;
+        height: 100%;
+        opacity: 0;
+        z-index: 6;
+    }
+}
+
+@media (min-width: 560px) and (max-width: 640px) {
+    .toggle,
+    .toggler {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 10px;
+        font-size: 8px;
+    }
+    .check {
+        position: absolute;
+        display: block;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        width: 20;
+        height: 100%;
+        opacity: 0;
+        z-index: 6;
+    }
+}
